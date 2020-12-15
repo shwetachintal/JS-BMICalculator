@@ -1,0 +1,59 @@
+<html>
+	<head>
+		<title>BMI Calculator App</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">		
+		<link rel= 'stylesheet' href = 'BmiCalcStyle.css'>
+	</head>
+	<body style="background-color:black">
+	<div class="Container">
+		<h1 class ="Title" style="margin-top:20px;">BMI Calculator</h1>
+		<br><br><br>
+		<div class = 'inputs'>
+			<h4 style="margin-top:50px">Height in CM:  <input id="inputHeight" type="text"></h4>
+		
+			<h4>Weight in KG:  <input id="inputWeight" type="text"></h4>
+			
+			<button id="calcBMI">Calculate</button>  
+		</div>
+		<div id="result" ></div>
+		<div class="guide">
+			<h2 style="margin-left:6px;">BMI Weight Guide</h2>
+			Under weight = less than 18.6<br>
+			Normal weight = 10.8 to 24.9<br>
+			Over weight = Greater than 24.9<br>
+		</div>		
+	</div>		
+	</body>
+	<script>
+	function init(){
+	 document.querySelector('#result').innerHTML = "";
+	}
+	
+	
+	
+	
+	document.querySelector("#calcBMI").addEventListener('click', function(){
+	init();
+		var inputHeight = document.querySelector("#inputHeight").value;
+		var inputWeight = document.querySelector("#inputWeight").value;
+		var result = document.querySelector('#result');
+		
+		
+		console.log("App Started Successfully.");
+		
+		if(inputHeight!= null && inputHeight!= undefined && inputWeight!= null && inputWeight!= undefined){
+			var BMI =  ([inputWeight/inputHeight/inputHeight] * 10000).toFixed(2);
+			console.log(BMI);
+			//Math.round(BMI);
+			result.innerHTML += BMI;
+		}else{
+			result.innerHTML += "NaN";
+		}
+		
+	});
+		
+		
+		
+	
+	</script>
+</html>

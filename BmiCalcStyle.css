@@ -1,0 +1,46 @@
+.Container{
+	width:27%;
+	height:80%;
+	background-color:yellow;
+	margin: 0 auto;
+	margin-top: 70px;
+	margin-bottom:50px
+	
+}
+.Title{
+	text-align:center;
+	
+}
+.inputs{
+	margin: 0;
+	padding:20px;
+	position: absolute;
+	left: 50%;
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	float:left
+}
+.guide{
+	float:left;
+	clear:left;
+	margin-top:10px;
+	margin-left:40px;
+}
+#result{
+	float:left;	
+	margin-top:150px;
+	margin-left:150px;
+	font-size:30px;
+	color:blue;
+}
+.inputs > button{
+	background-color:blue;
+	color:white;
+	font-size: 20px;
+	padding:5px;
+	margin-top:40px;
+	position: absolute;
+	left: 50%;
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
